@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<View:ColumnView xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Type="http://www.sap.com/ndb/DataModelType.ecore" xmlns:View="http://www.sap.com/ndb/ViewModelView.ecore" schemaVersion="1.2" name="AT_STORES" dataCategory="DIMENSION" defaultNode="#//Data Foundation" clientDependent="true" applyPrivilegeType="ANALYTIC_PRIVILEGE">
+  <endUserTexts label="Store master"/>
+  <origin system="CAD:VHUAICADDB.HEC.UNDERARMOUR.COM:06:SINGLEDB:AABRAHAM"/>
+  <executionHints semantic="TEMPLATE"/>
+  <viewNode xsi:type="View:JoinNode" name="Data Foundation">
+    <element name="STORE_ID" aggregationBehavior="NONE">
+      <endUserTexts label="STORE_ID"/>
+      <inlineType primitiveType="BIGINT" length="19" precision="19" scale="0"/>
+    </element>
+    <element name="STORE_NAME" aggregationBehavior="NONE">
+      <endUserTexts label="STORE_NAME"/>
+      <inlineType primitiveType="NVARCHAR" length="500" precision="500" scale="0"/>
+    </element>
+    <element name="IS_UA_ACCOUNT" aggregationBehavior="NONE">
+      <endUserTexts label="IS_UA_ACCOUNT"/>
+      <inlineType primitiveType="SMALLINT" length="5" precision="5" scale="0"/>
+    </element>
+    <element name="UA_ACCOUNT_NUMBER" aggregationBehavior="NONE">
+      <endUserTexts label="UA_ACCOUNT_NUMBER"/>
+      <inlineType primitiveType="BIGINT" length="19" precision="19" scale="0"/>
+    </element>
+    <element name="STREET_NAME" aggregationBehavior="NONE">
+      <endUserTexts label="STREET_NAME"/>
+      <inlineType primitiveType="NVARCHAR" length="200" precision="200" scale="0"/>
+    </element>
+    <element name="CITY" aggregationBehavior="NONE">
+      <endUserTexts label="CITY"/>
+      <inlineType primitiveType="NVARCHAR" length="500" precision="500" scale="0"/>
+    </element>
+    <element name="STATE" aggregationBehavior="NONE">
+      <endUserTexts label="STATE"/>
+      <inlineType primitiveType="NVARCHAR" length="2" precision="2" scale="0"/>
+    </element>
+    <element name="ZIP" aggregationBehavior="NONE">
+      <endUserTexts label="ZIP"/>
+      <inlineType primitiveType="NVARCHAR" length="20" precision="20" scale="0"/>
+    </element>
+    <element name="SALES_REGION" aggregationBehavior="NONE">
+      <endUserTexts label="SALES_REGION"/>
+      <inlineType primitiveType="NVARCHAR" length="200" precision="200" scale="0"/>
+    </element>
+    <element name="STORE_LAT" aggregationBehavior="NONE">
+      <endUserTexts label="STORE_LAT"/>
+      <inlineType primitiveType="DOUBLE" length="15" precision="15" scale="0"/>
+    </element>
+    <element name="STORE_LON" aggregationBehavior="NONE">
+      <endUserTexts label="STORE_LON"/>
+      <inlineType primitiveType="DOUBLE" length="15" precision="15" scale="0"/>
+    </element>
+    <input>
+      <entity>../../AABRAHAM/hdbcattab/X_RUN_SPECIALTY_STORE.hdbcattab#/</entity>
+      <mapping xsi:type="Type:ElementMapping" targetName="STORE_ID" sourceName="STORE_ID"/>
+      <mapping xsi:type="Type:ElementMapping" targetName="STORE_NAME" sourceName="STORE_NAME"/>
+      <mapping xsi:type="Type:ElementMapping" targetName="IS_UA_ACCOUNT" sourceName="IS_UA_ACCOUNT"/>
+      <mapping xsi:type="Type:ElementMapping" targetName="UA_ACCOUNT_NUMBER" sourceName="UA_ACCOUNT_NUMBER"/>
+      <mapping xsi:type="Type:ElementMapping" targetName="STREET_NAME" sourceName="STREET_NAME"/>
+      <mapping xsi:type="Type:ElementMapping" targetName="CITY" sourceName="CITY"/>
+      <mapping xsi:type="Type:ElementMapping" targetName="STATE" sourceName="STATE"/>
+      <mapping xsi:type="Type:ElementMapping" targetName="ZIP" sourceName="ZIP"/>
+      <mapping xsi:type="Type:ElementMapping" targetName="SALES_REGION" sourceName="SALES_REGION"/>
+      <mapping xsi:type="Type:ElementMapping" targetName="STORE_LAT" sourceName="STORE_LAT"/>
+      <mapping xsi:type="Type:ElementMapping" targetName="STORE_LON" sourceName="STORE_LON"/>
+      <layout xCoordinate="70" yCoordinate="30"/>
+    </input>
+    <layout xCoordinate="40" yCoordinate="85"/>
+  </viewNode>
+</View:ColumnView>
